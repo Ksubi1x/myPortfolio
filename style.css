@@ -67,11 +67,12 @@
 .heroWrap {
     width: 100%;
     display: flex;
+    flex-direction: column;
     height: 50%;
     padding: 0px 15px;
 }
 .heroText {
-    width: 80%;
+    width: 100%;
     padding: 30px;
     height: 100%;
     display: flex;
@@ -93,7 +94,7 @@
 }
 
 .contact2 {
-    width: 25%;
+    width: 50%;
     padding: 10px;
     border-radius: 20px;
     background-color: #EE0D35;
@@ -104,14 +105,16 @@
 }
 
 .heroPics {
-    width: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
 }
 
 .heroPic {
-    height: 100%;
-    display: flex;
-   
 
+    width: 100%;
+    align-self: center;
 }
 
 
