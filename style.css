@@ -60,7 +60,7 @@
 
 .link {
     cursor: pointer;
-    
+     
 }
 
 .contactButton {
@@ -202,6 +202,118 @@
     filter: brightness(80%);
 }
 
+.projectsWrapper {
+    padding: 15px;
+    width: 100%;
+}
+
+.projectHeading {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.projectsContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project {
+    color: white;
+    text-align: left;
+    background-color: black;
+    width: 90%;
+    padding: 30px;
+    border-radius: 7px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+
+.projectLinks {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    color: white;
+    position: relative;
+    text-decoration: none;
+    margin: 3px 0px;
+    width: max-content;
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    background-color: #EE0D35;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -2px;
+    transition: 0.3s;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+.projectTools {
+    color: #EE0D35;
+    font-weight: 400;
+}
+
+.projectDesc {
+    font-weight: 400;
+}
+
+.group1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+.group2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+
+}
+
+.contactWrapper {
+    background-color: black;
+    padding: 15px;
+    
+}
+
+.contactHeading {
+    color: white;
+    text-align: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.input {
+    width: 50%;
+}
+
+
 @media screen and (max-width: 900px) {
     .navMenu {
         display: none;
@@ -226,8 +338,14 @@
         justify-content: space-around;
     }
 
-    
-
+    .group1 {
+        flex-direction: row;
+        width: 70%;
+    }
+    .group2 {
+        flex-direction: row;
+        width: 70%;
+    }
     
 
 }
