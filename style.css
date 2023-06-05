@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 .wrapper {
     width: 100%;
@@ -12,7 +13,6 @@
 
 .container {
     width: 100%;
-
 
 }
 
@@ -69,9 +69,10 @@
     padding: 5px 10px;
     border-radius: 30px;
     border-color: red;
-    border-style: solid;
+    border-style: solid ;
     transition: 0.3s;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .contactButton:hover {
@@ -196,6 +197,8 @@
     cursor: pointer;
     font-size: 10px;
     align-self: center;
+    text-align: center;
+    text-decoration: none;
 }
 
 .contact3:hover {
@@ -256,6 +259,7 @@
     left: 0;
     bottom: -2px;
     transition: 0.3s;
+    border-radius: 10px;
 }
 
 .link:hover::after {
@@ -292,7 +296,11 @@
 .contactWrapper {
     background-color: black;
     padding: 15px;
-    
+    width: 100%;
+    display: flex;
+    justify-content: center;    
+    flex-direction: column;
+    align-items: center;
 }
 
 .contactHeading {
@@ -300,18 +308,108 @@
     text-align: center;
 }
 
+.contactContainer {
+    width: 60%;
+}
+
 .contactForm {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    justify-content: center;
     width: 100%;
     align-items: center;
+    justify-content: center;
 }
 
 .input {
-    width: 50%;
+    width: 100%;
+    padding: 5px 5px;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 5px;
 }
+
+.mailGroup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.messageBox {
+    resize: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.submitForm {
+    align-items: center;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #EE0D35;
+    border-radius: 20px;
+    border: none;
+    padding: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.submitForm:hover {
+    filter: brightness(90%);
+}
+
+.socialsWrapper {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 30px;
+    width: 100%;
+    gap: 10px;
+}
+
+.social {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   gap: 5px;
+}
+
+.link2 {
+    color: black;
+    position: relative;
+    text-decoration: none;
+    margin: 3px 0px;
+    width: max-content;
+    font-weight: 400;
+}
+
+.link2::after {
+    content: "";
+    position: absolute;
+    background-color: #EE0D35;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -2px;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.link2:hover::after {
+    width: 100%;
+}
+
+#emailLink {
+    cursor: default;
+}
+
 
 
 @media screen and (max-width: 900px) {
@@ -347,5 +445,12 @@
         width: 70%;
     }
     
+    
 
+}
+
+@media screen and (min-width: 800px) {
+    .contactContainer {
+        width: 50%;
+    }
 }

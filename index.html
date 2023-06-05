@@ -10,6 +10,18 @@
 
 
     <title>My Portfolio</title>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("YOUR_PUBLIC_KEY");
+    })();
+    </script>
+
+
 </head>
 
 
@@ -25,19 +37,22 @@
                 <nav class="navbar">
                     <div class="navLogo">
                         <div>
-                            <img class="navLogoPic" src="logo.png" alt="logo">
+                            <img class="navLogoPic" src="/images/logo.png" alt="logo">
                         </div>
                         <div class="logoText">Ksubi1x</div>
                     </div>
                     <div class="navMenu">
                         <ul class="navList">
-                            <li class="link">Home</li>
-                            <li class="link">About Me</li>
-                            <li class="link">Projects</li>
+                            <li>
+                                <a href="#about" class="link">About Me</a>
+                            </li>
+                            <li>
+                                <a href="#projects" class="link">Projects</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="navContact">
-                        <button class="contactButton">Contact Me</button>
+                        <a href="#contactSection" class="contactButton">Contact Me</a>
                     </div>
                 </nav>
             </header>
@@ -50,17 +65,17 @@
                     <h1 class="weight">FULL-STACK WEB DEVELOPER</h1>
                 </div>
                 
-                <img class="heroPic" src="ksubi.png" alt="" srcset="">
+                <img class="heroPic" src="/images/ksubi.png" alt="" srcset="">
                
                 
             </section>
 
             <!-- About -->
 
-            <section class="aboutWrap">
+            <section class="aboutWrap" id="about">
 
-                <div class="mainAbout">
-                    <img src="tech.png" class="aboutPic">
+                <div class="mainAbout" >
+                    <img src="/images/tech.png" class="aboutPic">
                     <div class="aboutDesc">
                         <div class="titleLine">
                             <div class="title">ABOUT ME</div>
@@ -69,7 +84,7 @@
                         <h3 class="aboutText">
                             My name is Jesus Hernandez, and I am a Full-Stack Web Developer specializing in creating fully responsive webpages for all devices.
                         </h3>
-                        <button class="contact3">CONTACT NOW</button>
+                        <a href="#contactSection" class="contact3">CONTACT NOW</a>
                     </div>
                 </div>
 
@@ -79,11 +94,11 @@
 
             <!-- Projects -->
 
-            <section class="projectsWrapper">
+            <section class="projectsWrapper"id="projects">
 
-                <h2 class="projectHeading">PROJECTS</h2>
+                <h2 class="projectHeading" >PROJECTS</h2>
 
-                <div class="projectsContainer">
+                <div class="projectsContainer" >
 
                     <div class="group1">
 
@@ -92,8 +107,8 @@
                             <h5 class="projectTools">HTML, CSS, ReactJS, ExpressJS, MySQL</h5>
                             <h5 class='projectDesc'>Fullstack CRUD application where users can register, make posts, and comment on them.</h5>
                             <div class="projectLinks">
-                                <a href="#" class="link">Live Link</a>
-                                <a href="#" class="link">Repository Link</a>
+                                <a href="https://incredible-tiramisu-d7b018.netlify.app/" class="link">Live Link</a>
+                                <a href="https://github.com/Ksubi1x/myBook" class="link">Repository Link</a>
                             </div>
                         </div>
     
@@ -103,8 +118,8 @@
                             <h5 class="projectTools">HTML, CSS, ReactJS, ExpressJS, SocketIO, MongoDB</h5>
                             <h5 class='projectDesc'>Fullstack CRUD application where users can register, and chat with friends live.</h5>
                             <div class="projectLinks">
-                                <a href="#" class="link">Live Link</a>
-                                <a href="#" class="link">Repository Link</a>
+                                <a href="https://pure-woodland-23274.herokuapp.com/" class="link">Live Link</a>
+                                <a href="https://github.com/kipschetnan/Tocative" class="link">Repository Link</a>
                             </div>
                         </div>
     
@@ -118,18 +133,18 @@
                             <h5 class="projectTools">HTML, CSS, JavaScript</h5>
                             <h5 class='projectDesc'>Simple JavaScript powered bill splitter to divide a bill for multiple people</h5>
                             <div class="projectLinks">
-                                <a href="#" class="link">Live Link</a>
-                                <a href="#" class="link">Repository Link</a>
+                                <a href="https://ksubi1x.github.io/bill-splitter/" class="link">Live Link</a>
+                                <a href="https://github.com/Ksubi1x/bill-splitter" class="link">Repository Link</a>
                             </div>
                         </div>
     
                         <div class="project">
                             <h3 class="projectName">PASSWORD GENERATOR</h3>
                             <h5 class="projectTools">HTML, CSS, JavaScript</h5>
-                            <h5 class='projectDesc'>Fully functional password generator with custom selections.</h5>
+                            <h5 class='projectDesc'>Fully functional password generator with the user being able to have custom selections.</h5>
                             <div class="projectLinks">
-                                <a href="#" class="link">Live Link</a>
-                                <a href="#" class="link">Repository Link</a>
+                                <a href="https://ksubi1x.github.io/password-generator/" class="link">Live Link</a>
+                                <a href="https://github.com/Ksubi1x/password-generator" class="link">Repository Link</a>
                             </div>
                         </div>
 
@@ -141,7 +156,7 @@
 
             <!-- Contact Form -->
 
-            <section class="contactWrapper" 
+            <section class="contactWrapper" id="contactSection">
 
                 <div class="contactContainer">
 
@@ -149,12 +164,44 @@
 
                     <div class="contactForm">
 
-                        <input type="text" placeholder="Name" class="input">
-                        <input type="text" placeholder="Email" class="input">
-                        <input type="text" placeholder="Message" class="input">
+                        <div class="mailGroup">
+                            
+                            <input type="text" id="from_name" placeholder="Name" class="input">
+                            <input type="text" id="email_id" placeholder="Email" class="input">
+                        
+                        </div>
+
+                        <textarea name="messageBox" class="messageBox" id="message" rows="5" placeholder="Message"></textarea>
+
+                        <button class="submitForm" onclick="sendEmail()">Submit</button>
 
                     </div>
+
                 </div>
+
+            </section>
+
+            <!-- Socials -->
+
+            <section class="socialsWrapper">
+                
+                <div class="social">
+                    <img class="socialImg" src="/images/linkedin.png">
+                    <a class="link2" href="https://www.linkedin.com/in/jesus-hernandez-77a152257">LinkedIn</a>
+                </div>
+                
+                <div class="social">
+                    <img class="socialImg" src="/images/email.png">
+                    <a class="link2" id="emailLink">Jesusxk02@gmail.com</a>
+                </div>
+                
+
+                <div class="social">
+                    <img class="socialImg" src="/images/github.png">
+                    <a  class="link2" href="https://github.com/Ksubi1x">Github</a>
+                </div>
+
+                
 
             </section>
 
@@ -167,4 +214,7 @@
     </main>
     
 </body>
+
+<script src="script.js"></script>
+
 </html>
