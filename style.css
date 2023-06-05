@@ -309,7 +309,7 @@
 }
 
 .contactContainer {
-    width: 60%;
+    width: 90%;
 }
 
 .contactForm {
@@ -451,6 +451,11 @@
 
 @media screen and (min-width: 800px) {
     .contactContainer {
-        width: 50%;
+        width: 80%;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .contactContainer {
+        width: 60%;
     }
 }
