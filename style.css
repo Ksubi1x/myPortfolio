@@ -151,7 +151,6 @@
 
 .aboutDesc {
     color: white;
-    text-align: left;
     align-self: center;
     display: flex;
     flex-direction: column;
